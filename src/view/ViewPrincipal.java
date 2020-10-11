@@ -43,6 +43,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("KBLO-CODE Sistema de Gerenciamento de Estoque");
+        setResizable(false);
 
         uJPanelImagem1.setImagem(new java.io.File("C:\\Users\\user\\Documents\\Egus\\foto\\binario.png"));
 
