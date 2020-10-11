@@ -330,12 +330,12 @@ public class ViewCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
-        // TODO add your handling code here:
+        // chama método excluir
         excluirCliente();
     }//GEN-LAST:event_btnDelActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
-        // TODO add your handling code here:
+        // chama método alterar, e prepara para o método salvar
         novoAlterar = "alterar";
         habilitarCampos(true);
         alterarCliente();
@@ -343,14 +343,14 @@ public class ViewCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
-        // TODO add your handling code here:
+        // botão novo que limpa os campos e os habilitam para nova entrada de dados
         this.habilitarCampos(true);
         this.limparCampos();
         novoAlterar = "novo";
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        // TODO add your handling code here:
+        // botão cancelar, que limpa os campos e desabilita-os
         habilitarCampos(false);
         limparCampos();
     }//GEN-LAST:event_btnCancelActionPerformed
