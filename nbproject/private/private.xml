@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/DAO/DaoProduto.java</file>
-            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/util/Formatador.java</file>
-            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/model/ModelProdutos.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/controller/ControllerUsuario.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/DAO/DAOUsuario.java</file>
             <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewProduto.java</file>
-            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/controller/ControllerProdutos.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewLogin.java</file>
             <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewCliente.java</file>
-            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/conexoes/ConexaoMySql.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewVenda.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewUsuario.java</file>
             <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/view/ViewPrincipal.java</file>
+            <file>file:/C:/Users/user/Documents/Coders/Java/NetBeansProjects/GerEstoque/src/model/ModelVendas.java</file>
         </group>
     </open-files>
 </project-private>

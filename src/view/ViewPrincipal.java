@@ -20,6 +20,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     public ViewPrincipal() {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -31,7 +32,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        uJPanelImagem1 = new componentes.UJPanelImagem();
+        painelPrinc = new componentes.UJPanelImagem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -40,22 +41,23 @@ public class ViewPrincipal extends javax.swing.JFrame {
         menuClientes = new javax.swing.JMenuItem();
         menuProd = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("KBLO-CODE Sistema de Gerenciamento de Estoque");
         setResizable(false);
 
-        uJPanelImagem1.setImagem(new java.io.File("C:\\Users\\user\\Documents\\Egus\\foto\\binario.png"));
+        painelPrinc.setImagem(new java.io.File("C:\\Users\\user\\Documents\\Coders\\Java\\NetBeansProjects\\IMAGENS\\mundo reverso.jpeg"));
 
-        javax.swing.GroupLayout uJPanelImagem1Layout = new javax.swing.GroupLayout(uJPanelImagem1);
-        uJPanelImagem1.setLayout(uJPanelImagem1Layout);
-        uJPanelImagem1Layout.setHorizontalGroup(
-            uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1025, Short.MAX_VALUE)
+        javax.swing.GroupLayout painelPrincLayout = new javax.swing.GroupLayout(painelPrinc);
+        painelPrinc.setLayout(painelPrincLayout);
+        painelPrincLayout.setHorizontalGroup(
+            painelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1251, Short.MAX_VALUE)
         );
-        uJPanelImagem1Layout.setVerticalGroup(
-            uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+        painelPrincLayout.setVerticalGroup(
+            painelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 641, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Arquivos");
@@ -103,6 +105,15 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Vendas");
+
+        jMenuItem2.setText("Menu de Vendas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -111,14 +122,15 @@ public class ViewPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelPrinc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelPrinc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1273, 728));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -140,6 +152,14 @@ public class ViewPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         new ViewProduto().setVisible(true);
     }//GEN-LAST:event_menuProdActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        ViewVenda venda = new ViewVenda();
+        venda.setVisible(true);
+        painelPrinc.add(venda);
+        //new ViewVenda().setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,9 +202,10 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem menuClientes;
     private javax.swing.JMenuItem menuProd;
     private javax.swing.JMenuItem menuUsuario;
-    private componentes.UJPanelImagem uJPanelImagem1;
+    private componentes.UJPanelImagem painelPrinc;
     // End of variables declaration//GEN-END:variables
 }
