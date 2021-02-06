@@ -7,6 +7,7 @@ package view;
 
 import controller.ControllerUsuario;
 import javax.swing.JOptionPane;
+import model.ModelSessaoUsuario;
 import model.ModelUsuario;
 
 /**
@@ -17,6 +18,7 @@ public class ViewLogin extends javax.swing.JFrame {
     
     ControllerUsuario controllerUsuario = new ControllerUsuario();
     ModelUsuario modelUsuario = new ModelUsuario();
+    ModelSessaoUsuario modelSessaoUsuario = new ModelSessaoUsuario();
     
 
     /**
@@ -32,6 +34,11 @@ public class ViewLogin extends javax.swing.JFrame {
         modelUsuario.setUsuSenha(String.valueOf(txtKey.getPassword()));
         
         if (controllerUsuario.validadorUsuario(modelUsuario)){
+            modelUsuario = controllerUsuario.getUsuarioController(txtUsu.getText());
+            modelSessaoUsuario.cod = modelUsuario.getUsuId();
+            modelSessaoUsuario.nome = modelUsuario.getUsuNome();
+            modelSessaoUsuario.login = modelUsuario.getUsuLogin();
+            
             new ViewPrincipal().setVisible(true);
         }else{
             JOptionPane.showMessageDialog(this, "Usuario/Senha Inválida!", "ATENÇÃO",JOptionPane.WARNING_MESSAGE);

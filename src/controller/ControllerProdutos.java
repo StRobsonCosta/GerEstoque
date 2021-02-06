@@ -32,7 +32,20 @@ public class ControllerProdutos {
         return this.daoProduto.retornarProdutoDAO(pCodigo);
     }
     
+        /**
+    * recupera Cliente
+    * @param pCliId
+    * @return ModelCliente
+    */
+    public ModelProdutos getProdutoController(String pProdNome){
+        return this.daoProduto.retornarProdutoDAO(pProdNome);
+    }
+    
     public ArrayList <ModelProdutos> retornarListaProdutoController(){
         return this.daoProduto.retornarListaProdutoDAO();
+    }
+
+    public boolean alterarEstoqueProdutoController(ArrayList<ModelProdutos> listarProdutos) {
+        return  this.daoProduto.alterarEstoqueProdutosDAO(listarProdutos);
     }
 }

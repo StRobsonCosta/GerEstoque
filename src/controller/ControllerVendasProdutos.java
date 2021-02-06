@@ -56,4 +56,8 @@ public class ControllerVendasProdutos {
     public boolean excluirVendasProdutosController(int pVenProdId){
         return this.daoVendasProdutos.excluirVendasProdutosDAO(pVenProdId);
     }
+
+    public boolean salvarVendasProdutosController(ArrayList<ModelVendasProdutos> listaModelVendasProdutos) {
+        return this.daoVendasProdutos.salvarVendasProdutosDAO(listaModelVendasProdutos);
+    }
 }

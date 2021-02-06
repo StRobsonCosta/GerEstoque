@@ -41,7 +41,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         menuClientes = new javax.swing.JMenuItem();
         menuProd = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuVendas = new javax.swing.JMenuItem();
+        menuPDV = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("KBLO-CODE Sistema de Gerenciamento de Estoque");
@@ -106,13 +107,21 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         jMenu3.setText("Vendas");
 
-        jMenuItem2.setText("Menu de Vendas");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        menuVendas.setText("Menu de Vendas");
+        menuVendas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                menuVendasActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu3.add(menuVendas);
+
+        menuPDV.setText("PDV");
+        menuPDV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPDVActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuPDV);
 
         jMenuBar1.add(jMenu3);
 
@@ -153,13 +162,18 @@ public class ViewPrincipal extends javax.swing.JFrame {
         new ViewProduto().setVisible(true);
     }//GEN-LAST:event_menuProdActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void menuVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVendasActionPerformed
         // TODO add your handling code here:
         ViewVenda venda = new ViewVenda();
         venda.setVisible(true);
         painelPrinc.add(venda);
         //new ViewVenda().setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_menuVendasActionPerformed
+
+    private void menuPDVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPDVActionPerformed
+        // TODO add your handling code here:
+        new ViewPDV().setVisible(true);
+    }//GEN-LAST:event_menuPDVActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,10 +216,11 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem menuClientes;
+    private javax.swing.JMenuItem menuPDV;
     private javax.swing.JMenuItem menuProd;
     private javax.swing.JMenuItem menuUsuario;
+    private javax.swing.JMenuItem menuVendas;
     private componentes.UJPanelImagem painelPrinc;
     // End of variables declaration//GEN-END:variables
 }

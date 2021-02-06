@@ -90,6 +90,30 @@ public class DaoProduto extends ConexaoMySql{
         }
         return modelProdutos;
     }
+    public ModelProdutos retornarProdutoDAO (String pNomeProduto){
+        ModelProdutos modelProdutos = new ModelProdutos();
+        try {
+            this.conectar();
+            this.executarSQL("SELECT `prod_id`,"
+                    + "`prod_nome`,"
+                    + "`prod_valor`,"
+                    + "`prod_estoque`"
+                    + "FROM `tbl_produto` WHERE `prod_nome` = '"+pNomeProduto+"'");
+            while(this.getResultSet().next()){
+                modelProdutos.setProdId(this.getResultSet().getInt(1));
+                modelProdutos.setProdNome(this.getResultSet().getString(2));
+                modelProdutos.setProdValor(this.getResultSet().getDouble(3));
+                modelProdutos.setProdEstoque(this.getResultSet().getInt(4));
+            }
+            
+        } catch (Exception e) {
+        e.printStackTrace();
+            
+        }finally {
+            this.fecharConexao();
+        }
+        return modelProdutos;
+    }
     public ArrayList <ModelProdutos> retornarListaProdutoDAO(){
         ArrayList <ModelProdutos> listaModelProdutos = new ArrayList<>();
         ModelProdutos modelProdutos = new ModelProdutos();
@@ -119,5 +143,25 @@ public class DaoProduto extends ConexaoMySql{
             this.fecharConexao();
         }
         return listaModelProdutos;
+    }
+
+    public boolean alterarEstoqueProdutosDAO(ArrayList<ModelProdutos> listarProdutos) {
+        try {
+            this.conectar();
+            for (int i = 0; i < listarProdutos.size(); i++) {
+                            
+                this.executarUpdateDeleteSQL(
+                "UPDATE `tbl_produto` SET"
+                        + "`prod_estoque` = '"+ listarProdutos.get(i).getProdEstoque()+"'"
+                        + "WHERE `prod_id` = '" + listarProdutos.get(i).getProdId()+"'");
+            }    
+            return true;
+        } catch (Exception e) {
+        e.printStackTrace();
+            return false;
+        }finally {
+            this.fecharConexao();
+        }
+        
     }
 }

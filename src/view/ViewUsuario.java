@@ -134,7 +134,7 @@ public class ViewUsuario extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
         txtSenha = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Usuario");
         setResizable(false);
 

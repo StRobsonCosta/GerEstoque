@@ -10,6 +10,7 @@ public class ModelVendas {
 
     private int venId;
     private String cliente;
+    private int client;
     private Date venDataVendas;
     private double venValorLiq;
     private double venValorBrut;
@@ -41,11 +42,19 @@ public class ModelVendas {
     public void setCliente(String pCliente){
         this.cliente = pCliente;
     }
+        
+    public void setClient(int cliente){
+        this.client = cliente;
+    }
     /**
     * @return fk_cliente
     */
     public String getCliente(){
         return this.cliente;
+    }
+    
+    public int getClient(){
+        return this.client;
     }
 
     /**
@@ -106,6 +115,6 @@ public class ModelVendas {
 
     @Override
     public String toString(){
-        return "ModelVendas {" + "::venId = " + this.venId + "::cliente = " + this.cliente + "::venDataVendas = " + this.venDataVendas + "::venValorLiq = " + this.venValorLiq + "::venValorBrut = " + this.venValorBrut + "::venValorDesc = " + this.venValorDesc +  "}";
+        return "ModelVendas {" + "::venId = " + this.venId + "::cliente = " + this.cliente + "::venDataVendas = " + this.venDataVendas + "::venValorLiq = " + this.venValorLiq + "::venValorBruto = " + this.venValorBrut + "::venDesc = " + this.venValorDesc +  "}";
     }
 }
